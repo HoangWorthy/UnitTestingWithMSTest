@@ -25,7 +25,7 @@ namespace Test.UnitTests1
             _service.AddUser("Hoang", "Hoang@example.com");
 
             // The users should be added in order
-            Assert.AreEqual(2, _service.Users.Count);
+            Assert.AreEqual(1, _service.Users.Count);
             Assert.AreEqual("Khoi", _service.Users[0].Name);
             Assert.AreEqual("Hoang", _service.Users[1].Name);
         }
