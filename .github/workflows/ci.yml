@@ -1,0 +1,35 @@
+name: .NET Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: ⬇️ Checkout code
+      uses: actions/checkout@v3
+
+    - name: 🔧 Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.406'  # Adjust to your version
+
+    - name: 📦 Restore dependencies
+      run: dotnet restore
+
+    - name: 🛠️ Build solution
+      run: dotnet build --no-restore --configuration Release
+
+    - name: 🧪 Run tests with MSTest
+      run: dotnet test --no-build --logger "trx" --results-directory TestResults
+
+    - name: 📤 Upload test results (optional)
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: TestResults/
