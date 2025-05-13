@@ -84,4 +84,5 @@ git checkout -b feature/email-validation
 git add .
 git commit -m "Add email format validation"
 git push origin feature/email-validation
+```
 ➡️ GitHub runs tests automatically and reports status in the PR.
