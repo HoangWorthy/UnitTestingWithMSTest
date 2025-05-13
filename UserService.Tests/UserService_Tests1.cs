@@ -23,7 +23,7 @@ namespace Test.UnitTests1
             _service.AddUser("Khoi", "khoi@example.com");
             _service.AddUser("Hoang", "Hoang@example.com");
 
-            Assert.AreEqual(1, _service.Users.Count);
+            Assert.AreEqual(0, _service.Users.Count);
             Assert.AreEqual("Khoi", _service.Users[0].Name);
             Assert.AreEqual("Hoang", _service.Users[1].Name);
         }
