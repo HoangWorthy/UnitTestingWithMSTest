@@ -61,3 +61,47 @@ Make sure you have the .NET SDK installed.
 
 ```bash
 dotnet test --logger "trx"
+
+## ✅ How CI Works in This Project
+
+This project uses **GitHub Actions** to run MSTest automatically whenever code is pushed or a pull request is created. This ensures code quality and helps catch bugs early.
+
+### 🔁 CI Workflow Process
+
+1. **Push or Pull Request**  
+   Whenever you push code to any branch or open a pull request to `main`, the GitHub Actions workflow is triggered automatically.
+
+2. **Build and Restore**  
+   The workflow restores dependencies and builds the `.NET` solution using the `dotnet build` command.
+
+3. **Run Tests**  
+   All test projects (such as `UserService.Tests`) are executed using `dotnet test`.
+
+4. **Pass/Fail Result**  
+   - ✅ If **all tests pass**, the commit or pull request is marked as successful.
+   - ❌ If **any test fails**, the GitHub Action will fail and **you will not be able to merge the PR** if branch protection rules are enabled.
+
+---
+
+## ✅ CI/CD with GitHub Actions
+
+This project uses automated testing via GitHub Actions to ensure code quality and prevent regressions.
+
+### 🔄 Workflow Steps
+
+* **Trigger:** Runs automatically on every `push` to the `main` branch and on every `pull_request` targeting the `main` branch.
+* **Build:** Restores all necessary dependencies and compiles the C# code using the `dotnet build` command.
+* **Test:** Executes all unit test suites found within the solution using the `dotnet test` command with the MSTest framework.
+* **Result:**
+    * **✅ Passing tests → PR mergeable.** If all tests pass, the pull request is considered safe to merge into the `main` branch.
+    * **❌ Failing tests → Blocks merge (if branch protection enabled).** If any tests fail, the GitHub Actions workflow will report a failure, and if branch protection rules are configured on the `main` branch, the pull request will be blocked from being merged until the issues are resolved and all tests pass.
+
+### Example CI Scenario
+
+```bash
+git checkout -b feature/email-validation
+# Make changes...
+git add .
+git commit -m "Add email format validation"
+git push origin feature/email-validation
+➡️ GitHub runs tests automatically and reports status in the PR.
