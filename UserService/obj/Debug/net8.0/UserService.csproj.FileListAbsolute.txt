@@ -9,3 +9,4 @@ C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService\obj\Debug\net8
 C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService\obj\Debug\net8.0\refint\UserService.dll
 C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService\obj\Debug\net8.0\UserService.pdb
 C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService\obj\Debug\net8.0\ref\UserService.dll
+C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService\obj\Debug\net8.0\UserService.sourcelink.json

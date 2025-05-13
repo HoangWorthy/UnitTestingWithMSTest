@@ -112,3 +112,4 @@ C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService.Tests\obj\Debu
 C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService.Tests\obj\Debug\net8.0\UserService.Tests.pdb
 C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService.Tests\obj\Debug\net8.0\UserService.Tests.genruntimeconfig.cache
 C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService.Tests\obj\Debug\net8.0\ref\UserService.Tests.dll
+C:\Users\PC\Documents\Study\unit-testing-using-mstest\UserService.Tests\obj\Debug\net8.0\UserService.Tests.sourcelink.json
