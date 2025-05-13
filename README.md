@@ -61,27 +61,7 @@ Make sure you have the .NET SDK installed.
 
 ```bash
 dotnet test --logger "trx"
-
-## ✅ How CI Works in This Project
-
-This project uses **GitHub Actions** to run MSTest automatically whenever code is pushed or a pull request is created. This ensures code quality and helps catch bugs early.
-
-### 🔁 CI Workflow Process
-
-1. **Push or Pull Request**  
-   Whenever you push code to any branch or open a pull request to `main`, the GitHub Actions workflow is triggered automatically.
-
-2. **Build and Restore**  
-   The workflow restores dependencies and builds the `.NET` solution using the `dotnet build` command.
-
-3. **Run Tests**  
-   All test projects (such as `UserService.Tests`) are executed using `dotnet test`.
-
-4. **Pass/Fail Result**  
-   - ✅ If **all tests pass**, the commit or pull request is marked as successful.
-   - ❌ If **any test fails**, the GitHub Action will fail and **you will not be able to merge the PR** if branch protection rules are enabled.
-
----
+```
 
 ## ✅ CI/CD with GitHub Actions
 
