@@ -12,10 +12,10 @@ namespace User.Services
         {
             foreach (User user in Users)
             {
-                if (string.Equals(user.Name, name, StringComparison.OrdinalIgnoreCase))
-                {
-                    throw new InvalidOperationException("User already exists");
-                }
+                // if (string.Equals(user.Name, name, StringComparison.OrdinalIgnoreCase))
+                // {
+                //     throw new InvalidOperationException("User already exists");
+                // }
             }
 
             Users.Add(new User(name, email));
